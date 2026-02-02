@@ -24,21 +24,51 @@ window.addEventListener('scroll', function() {
 
 // Contact form submission
 document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    const submitButton = this.querySelector('button[type="submit"]');
+    const messageDiv = document.getElementById('form-message');
+    const originalText = submitButton.textContent;
+    
+    // Show loading state
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+    messageDiv.style.display = 'none';
+    
+    // Form will submit to Formspree automatically
+    // Formspree will handle the response
+    fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            // Success
+            messageDiv.className = 'mb-3 alert alert-success';
+            messageDiv.textContent = 'Thank you! Your message has been sent successfully.';
+            messageDiv.style.display = 'block';
+            this.reset();
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        } else {
+            // Error
+            messageDiv.className = 'mb-3 alert alert-danger';
+            messageDiv.textContent = 'Oops! There was a problem sending your message. Please try again.';
+            messageDiv.style.display = 'block';
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        }
+    }).catch(error => {
+        // Network error
+        messageDiv.className = 'mb-3 alert alert-danger';
+        messageDiv.textContent = 'Network error. Please check your connection and try again.';
+        messageDiv.style.display = 'block';
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+    });
+    
+    // Prevent default form submission since we're using fetch
     e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const name = this.querySelector('input[type="text"]').value;
-    const email = this.querySelector('input[type="email"]').value;
-    const subject = this.querySelectorAll('input[type="text"]')[1].value;
-    const message = this.querySelector('textarea').value;
-    
-    // Here you would typically send this to a server
-    // For now, we'll just show an alert
-    alert('Thank you for your message! We will get back to you soon.\n\nNote: This is a demo. To make this functional, you\'ll need to set up a backend service or use a form service like Formspree.');
-    
-    // Reset form
-    this.reset();
 });
 
 // Animate elements on scroll
