@@ -130,7 +130,7 @@ export default function PressRelease() {
         <div className="press-boilerplate">
           <h3>About Rayleigh Studios</h3>
           <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, margin: 0 }}>
-            Rayleigh Studios is an independent game development studio founded by solo developer Porter Killian. Based in Newport Beach, California, the studio focuses on creating vibrant, cartoon-styled games that blend creativity with technical precision. Don't Crack! is the studio's debut title, marking the beginning of its journey into indie game development. Porter Killian creates both the art and code behind his games, with a background in Computer Science and Art from the University of Pennsylvania. For more information, visit <Link to="/" style={{ color: 'var(--primary-color)' }}>www.rayleighstudios.com</Link>.
+            Rayleigh Studios is an independent game development studio founded by solo developer Porter Killian. Based in Newport Beach, California, the studio focuses on creating vibrant, cartoon-styled games that blend creativity with technical precision. Don't Crack! is the studio's debut title, marking the beginning of its journey into indie game development. Porter Killian creates both the art and code behind his games, with a background in Computer Science and Art from the University of Pennsylvania. For more information, visit <Link to="/" style={{ color: 'var(--accent-blue)' }}>www.rayleighstudios.com</Link>.
           </p>
         </div>
 

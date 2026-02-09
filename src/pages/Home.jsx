@@ -63,7 +63,7 @@ export default function Home() {
         <div className="container">
           <div className="row mb-5">
             <div className="col-lg-8 mx-auto text-center">
-              <h2 className="section-title text-white">Our Games</h2>
+              <h2 className="section-title">Our Games</h2>
               <p className="text-white-50">
                 Explore our growing portfolio of innovative and engaging games
               </p>
