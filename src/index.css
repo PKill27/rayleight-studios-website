@@ -8,6 +8,8 @@
     --accent-color: #fbbf24;
     --accent-blue: #38bdf8;
     --accent-blue-dark: #0ea5e9;
+    --accent-blue-light: #e0f2fe;
+    --press-title-color: #fdba74;
     --dark-bg: #1c1917;
     --dark-secondary: #292524;
     --text-light: #fef3c7;
@@ -472,7 +474,7 @@ html {
     font-family: 'Orbitron', sans-serif;
     font-weight: 900;
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: var(--press-title-color);
     margin-bottom: 1rem;
 }
 
@@ -486,7 +488,7 @@ html {
     font-family: 'Inter', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--text-light);
+    color: var(--press-title-color);
     margin-bottom: 1rem;
     line-height: 1.4;
     letter-spacing: -0.02em;
@@ -517,11 +519,30 @@ html {
 }
 
 .press-quote {
+    position: relative;
     background: var(--dark-secondary);
-    border-left: 4px solid var(--primary-color);
     padding: 2rem;
     margin: 2.5rem 0;
-    border-radius: 8px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.press-quote::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #f9a8d4 0%, #fb923c 100%);
+    border-radius: 15px 15px 0 0;
+}
+
+.press-quote:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(249, 115, 22, 0.35);
 }
 
 .press-quote-text {
@@ -532,7 +553,7 @@ html {
 }
 
 .press-quote-author {
-    color: var(--primary-color);
+    color: var(--press-title-color);
     font-weight: 600;
 }
 
@@ -544,7 +565,7 @@ html {
 .press-section-title {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--press-title-color);
     margin-top: 3rem;
     margin-bottom: 1.5rem;
     padding-top: 2rem;
@@ -555,9 +576,16 @@ html {
     position: relative;
     background: var(--dark-secondary);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 15px;
     margin-top: 2rem;
     overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.press-boilerplate:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(249, 115, 22, 0.35);
 }
 
 .press-boilerplate::before {
@@ -568,12 +596,12 @@ html {
     right: 0;
     height: 3px;
     background: linear-gradient(90deg, #f9a8d4 0%, #fb923c 100%);
-    border-radius: 10px 10px 0 0;
+    border-radius: 15px 15px 0 0;
 }
 
 .press-boilerplate h3 {
     font-family: 'Orbitron', sans-serif;
-    color: var(--primary-color);
+    color: var(--press-title-color);
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }
@@ -581,13 +609,20 @@ html {
 .press-media-assets {
     background: var(--dark-secondary);
     padding: 2rem;
-    border-radius: 10px;
+    border-radius: 15px;
     margin-top: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.press-media-assets:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(249, 115, 22, 0.35);
 }
 
 .press-media-assets h3 {
     font-family: 'Orbitron', sans-serif;
-    color: var(--primary-color);
+    color: var(--press-title-color);
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }

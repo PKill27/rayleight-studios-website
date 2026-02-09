@@ -65,12 +65,6 @@ export default function PressRelease() {
   useDocumentTitle("Don't Crack! Press Release | Rayleigh Studios");
   return (
     <div className="container press-release">
-      <div className="back-to-home">
-        <Link to="/">
-          <i className="bi bi-arrow-left" /> Back to Home
-        </Link>
-      </div>
-
       <div className="press-header">
         <div className="press-logo">Don't Crack! Press Release</div>
         <div className="press-date-location">
@@ -98,7 +92,7 @@ export default function PressRelease() {
       </div>
 
       <div className="press-body">
-        <p className="lead">
+        <p>
           <strong>Newport Beach, CA – March 6, 2026</strong> – Rayleigh Studios, an independent game development studio founded by solo developer Porter Killian, is excited to announce Don't Crack!, a fast-paced cartoon-styled platformer where players take flight as an unhatched chick navigating the world from inside its fragile eggshell. Blending precision controls, chaotic environments, and a playful art style, Don't Crack! delivers a unique mix of challenge, charm, and pure panic.
         </p>
 
@@ -133,7 +127,6 @@ export default function PressRelease() {
           <li><strong>Climb the Leaderboards:</strong> Compete globally for the fastest times and ultimate bragging rights</li>
         </ul>
 
-        <h2 className="press-section-title">About Rayleigh Studios</h2>
         <div className="press-boilerplate">
           <h3>About Rayleigh Studios</h3>
           <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, margin: 0 }}>
@@ -141,7 +134,6 @@ export default function PressRelease() {
           </p>
         </div>
 
-        <h2 className="press-section-title">Media Assets</h2>
         <div className="press-media-assets">
           <h3>Media Assets Available</h3>
           <p style={{ color: 'var(--text-muted)', marginBottom: '1rem' }}>
