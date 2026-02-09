@@ -62,7 +62,7 @@ function AssetItem({ label, links }) {
 }
 
 export default function PressRelease() {
-  useDocumentTitle("Press Release - Don't Crack! | Rayleigh Studios");
+  useDocumentTitle("Don't Crack! Press Release | Rayleigh Studios");
   return (
     <div className="container press-release">
       <div className="back-to-home">
@@ -72,7 +72,7 @@ export default function PressRelease() {
       </div>
 
       <div className="press-header">
-        <div className="press-logo">RAYLEIGH STUDIOS</div>
+        <div className="press-logo">Don't Crack! Press Release</div>
         <div className="press-date-location">
           <strong>FOR IMMEDIATE RELEASE</strong>
           <br />
@@ -86,13 +86,24 @@ export default function PressRelease() {
         </p>
       </div>
 
+      <div className="press-boilerplate" style={{ marginTop: 0, marginBottom: '2rem' }}>
+        <h3>Fact Sheet</h3>
+        <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '1rem' }}>
+          <strong>Release Date:</strong> March 6, 2026<br />
+          <strong>Platforms:</strong> PC (Steam, Windows/Mac), Additional platforms TBD<br />
+          <strong>Player Modes:</strong> Single-player, Co-op (online)<br />
+          <strong>Age Rating:</strong> Not yet rated<br />
+          <strong>Languages:</strong> English (additional languages TBD)
+        </p>
+      </div>
+
       <div className="press-body">
         <p className="lead">
           <strong>Newport Beach, CA – March 6, 2026</strong> – Rayleigh Studios, an independent game development studio founded by solo developer Porter Killian, is excited to announce Don't Crack!, a fast-paced cartoon-styled platformer where players take flight as an unhatched chick navigating the world from inside its fragile eggshell. Blending precision controls, chaotic environments, and a playful art style, Don't Crack! delivers a unique mix of challenge, charm, and pure panic.
         </p>
 
         <p>
-          In Don't Crack!, players flap their tiny breakout wings through a series of vibrant stylistic environments while racing the clock, mastering tight flight mechanics, and fighting to stay un-cracked. Designed to be both joyful and rage-inducing, the game offers a satisfying skill curve that rewards precision, quick thinking, and perseverance.
+          In Don't Crack!, players flap their wings to fly through a series of vibrant stylistic environments while racing the clock, mastering tight flight mechanics, and fighting to stay un-cracked. Designed to be both joyful and rage-inducing, the game offers a satisfying skill curve that rewards precision, quick thinking, and perseverance.
         </p>
 
         <div className="press-quote">
@@ -108,7 +119,7 @@ export default function PressRelease() {
         </p>
 
         <p>
-          Don't Crack! represents the debut title from Rayleigh Studios, showcasing Porter Killian's ability to create both the art and code behind his games. With a background in Computer Science and Art from the University of Pennsylvania, Killian blends creativity with technical precision to craft playful, challenging experiences.
+          Don't Crack! represents the debut title from Rayleigh Studios, showcasing Killian's ability to create both the art and code behind his games. With a background in Computer Science and Art from the University of Pennsylvania, Killian blends creativity with technical precision to craft playful, challenging experiences.
         </p>
 
         <h2 className="press-section-title">Key Features</h2>
@@ -120,7 +131,6 @@ export default function PressRelease() {
           <li><strong>Solo or Co-Op Play:</strong> Tackle the journey alone or with a friend for twice the chaos</li>
           <li><strong>Race the Clock:</strong> Perfect your routes and beat level timers</li>
           <li><strong>Climb the Leaderboards:</strong> Compete globally for the fastest times and ultimate bragging rights</li>
-          <li><strong>A Journey Home:</strong> Guide your fragile hero across diverse environments in a quest to return to the nest</li>
         </ul>
 
         <h2 className="press-section-title">About Rayleigh Studios</h2>
@@ -128,18 +138,6 @@ export default function PressRelease() {
           <h3>About Rayleigh Studios</h3>
           <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, margin: 0 }}>
             Rayleigh Studios is an independent game development studio founded by solo developer Porter Killian. Based in Newport Beach, California, the studio focuses on creating vibrant, cartoon-styled games that blend creativity with technical precision. Don't Crack! is the studio's debut title, marking the beginning of its journey into indie game development. Porter Killian creates both the art and code behind his games, with a background in Computer Science and Art from the University of Pennsylvania. For more information, visit <Link to="/" style={{ color: 'var(--primary-color)' }}>www.rayleighstudios.com</Link>.
-          </p>
-        </div>
-
-        <h2 className="press-section-title">Game Details</h2>
-        <div className="press-boilerplate">
-          <h3>Fact Sheet</h3>
-          <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '1rem' }}>
-            <strong>Release Date:</strong> March 6, 2026<br />
-            <strong>Platforms:</strong> PC (Steam, Windows/Mac), Additional platforms TBD<br />
-            <strong>Player Modes:</strong> Single-player, Co-op (online)<br />
-            <strong>Age Rating:</strong> Not yet rated<br />
-            <strong>Languages:</strong> English (additional languages TBD)
           </p>
         </div>
 

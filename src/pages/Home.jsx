@@ -31,14 +31,20 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-6 mb-5 mb-lg-0">
               <h2 className="section-title">About Us</h2>
-              <p className="lead">
-                Rayleigh Studios is an independent, one-person game development studio founded and led by Porter Killian.
+              <p>
+                Rayleigh Studios, an independent, one-person game development studio founded and led by Porter Killian, is inspired by the wonder of Rayleigh scattering—the phenomenon that transforms invisible light into the vibrant colors of the sky. It's the reason daylight glows blue, why sunsets blush warm, and why even the smallest particles can shape something breathtaking.
               </p>
               <p>
-                The studio focuses on crafting vibrant, cartoon-styled games that blend creative world-building with thoughtful, precision-driven gameplay. With a commitment to expressive art, tight mechanics, and experiences that spark joy, Rayleigh Studios aims to create games that feel both playful and challenging. Don't Crack! is the studio's debut release, marking the beginning of its journey into indie game development.
+                We carry that spirit into every game we create.
               </p>
               <p>
-                The Rayleigh Studios name harkens back to Rayleigh scattering, which is what gives the sky its color—a fitting inspiration for a studio dedicated to creating vibrant, colorful worlds.
+                Just as scattered light turns the atmosphere into a radiant canvas, we aim to craft playful, expressive worlds filled with color, personality, and emotion. Our work is shaped by the belief that small details matter—a brush of color, a flicker of animation, a moment of joy. Together, those elements come alive as immersive experiences that feel both playful and challenging.
+              </p>
+              <p>
+                At Rayleigh Studios, we blend creativity and precision, building games where movement, emotion, and artistry work in harmony—much like the dance of light through the sky. We create games meant to be discovered, mastered, shared, and remembered.
+              </p>
+              <p>
+                Rayleigh scattering turns light into color. We turn sparks of inspiration into worlds crafted with creativity and precision.
               </p>
             </div>
             <div className="col-lg-6">
@@ -86,9 +92,9 @@ export default function Home() {
                   <p>
                     A vibrant, rage-inducing platformer where you fly as an unhatched chick navigating the world from inside its fragile eggshell. Master precision controls, race the clock, and try not to crack!
                   </p>
-                  <a href="/press-release" className="btn btn-sm btn-outline-secondary">
+                  <span className="btn btn-sm btn-outline-secondary disabled" style={{ cursor: 'default', opacity: 0.7, pointerEvents: 'none' }}>
                     Press release
-                  </a>
+                  </span>
                 </div>
               </div>
             </div>
