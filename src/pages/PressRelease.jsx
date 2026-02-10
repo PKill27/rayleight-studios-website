@@ -73,7 +73,7 @@ export default function PressRelease() {
           Newport Beach, CA – March 6, 2026
         </div>
         <h1 className="press-headline">
-          Rayleigh Studios Announces Don't Crack! — A Vibrant, Rage-Inducing Platformer About Flying Home in a Fragile Eggshell
+          Rayleigh Studios Announces Don't Crack! A Vibrant, Rage-Inducing Platformer About Flying Home in a Fragile Eggshell
         </h1>
         <p className="press-subheadline">
           Fast-Paced Cartoon-Styled Platformer Where Players Take Flight as an Unhatched Chick Navigating the World from Inside Its Fragile Eggshell
@@ -102,7 +102,7 @@ export default function PressRelease() {
 
         <div className="press-quote">
           <p className="press-quote-text">
-            "Games have always been a source of joy and connection for me. With Don't Crack!, I wanted to build something that feels playful on the surface but demands real mastery underneath — a game that makes you laugh, yell, and immediately hit 'retry.'"
+            "Games have always been a source of joy and connection for me. With Don't Crack!, I wanted to build something that feels playful on the surface but demands real mastery underneath, a game that makes you laugh, yell, and immediately hit 'retry.'"
           </p>
           <div className="press-quote-author">Porter Killian, Developer & Founder</div>
           <div className="press-quote-title">Rayleigh Studios</div>

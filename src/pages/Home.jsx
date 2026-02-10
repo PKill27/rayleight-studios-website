@@ -8,7 +8,8 @@ export default function Home() {
             <div className="col-lg-8 mx-auto text-center">
               <h1 className="hero-title mb-4">Welcome to Rayleigh Studios</h1>
               <p className="hero-subtitle mb-5">
-                Crafting immersive worlds and unforgettable gaming experiences
+                Where the unseen turns into color and ideas into worlds worth
+                discovering.
               </p>
               <div className="hero-buttons">
                 <a href="#games" className="btn btn-primary btn-lg me-3">
@@ -32,16 +33,16 @@ export default function Home() {
             <div className="col-lg-6 mb-5 mb-lg-0">
               <h2 className="section-title">About Us</h2>
               <p>
-                Rayleigh Studios, an independent, one-person game development studio founded and led by Porter Killian, is inspired by the wonder of Rayleigh scattering—the phenomenon that transforms invisible light into the vibrant colors of the sky. It's the reason daylight glows blue, why sunsets blush warm, and why even the smallest particles can shape something breathtaking.
+                Rayleigh Studios, an independent, one-person game development studio founded and led by Porter Killian, is inspired by the wonder of Rayleigh scattering, which is the phenomenon that transforms invisible light into the vibrant colors of the sky. It's the reason daylight glows blue, why sunsets blush warm, and why even the smallest particles can shape something breathtaking.
               </p>
               <p>
                 We carry that spirit into every game we create.
               </p>
               <p>
-                Just as scattered light turns the atmosphere into a radiant canvas, we aim to craft playful, expressive worlds filled with color, personality, and emotion. Our work is shaped by the belief that small details matter—a brush of color, a flicker of animation, a moment of joy. Together, those elements come alive as immersive experiences that feel both playful and challenging.
+                Just as scattered light turns the atmosphere into a radiant canvas, we aim to craft playful, expressive worlds filled with color, personality, and emotion. Our work is shaped by the belief that small details matter, a brush of color, a flicker of animation, or moment of joy. Together, those elements come alive as immersive experiences that feel both playful and challenging.
               </p>
               <p>
-                At Rayleigh Studios, we blend creativity and precision, building games where movement, emotion, and artistry work in harmony—much like the dance of light through the sky. We create games meant to be discovered, mastered, shared, and remembered.
+                At Rayleigh Studios, we blend creativity and precision, building games where movement, emotion, and artistry work in harmony, much like the dance of light through the sky. We create games meant to be discovered, mastered, shared, and remembered.
               </p>
               <p>
                 Rayleigh scattering turns light into color. We turn sparks of inspiration into worlds crafted with creativity and precision.
