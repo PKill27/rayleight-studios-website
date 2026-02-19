@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Home() {
   return (
     <>
@@ -50,10 +52,15 @@ export default function Home() {
             </div>
             <div className="col-lg-6">
               <div className="about-image">
-                <div className="image-placeholder">
-                  <i className="bi bi-controller" />
-                  <p>Studio Image</p>
-                </div>
+                <img
+                  src="/images/RayleighStudiosImage.png"
+                  alt="Rayleigh Studios"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    borderRadius: '8px'
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -93,9 +100,9 @@ export default function Home() {
                   <p>
                     A vibrant, rage-inducing platformer where you fly as an unhatched chick navigating the world from inside its fragile eggshell. Master precision controls, race the clock, and try not to crack!
                   </p>
-                  <span className="btn btn-sm btn-outline-secondary disabled" style={{ cursor: 'default', opacity: 0.7, pointerEvents: 'none' }}>
+                  <Link to="/dontcrack-press-release" className="btn btn-sm btn-outline-pink">
                     Press release
-                  </span>
+                  </Link>
                 </div>
               </div>
             </div>

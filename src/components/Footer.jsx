@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="row">
           <div className="col-md-6 mb-4 mb-md-0">
             <h5>Rayleigh Studios</h5>
-            <p>Creating immersive gaming experiences since 2026</p>
+            <p>Creating immersive gaming experiences since 2025</p>
           </div>
           <div className="col-md-6 text-md-end">
             <div className="social-links">

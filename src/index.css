@@ -315,6 +315,23 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
 }
 
+.btn-outline-pink {
+    border: 2px solid var(--accent-blue);
+    color: var(--accent-blue);
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background: transparent;
+}
+
+.btn-outline-pink:hover {
+    background: var(--accent-blue);
+    color: var(--dark-bg);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
 /* ===================================
    Team Section
    =================================== */
@@ -458,12 +475,18 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, var(--primary-color) 0%, var(--accent-blue) 100%);
+    background: var(--accent-blue);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-blue);
+    background: var(--accent-blue-dark);
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-blue) var(--dark-bg);
 }
 
 /* ===================================
