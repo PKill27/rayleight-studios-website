@@ -19,7 +19,7 @@ const MEDIA_ASSETS = [
     { href: '/images/DontCrack/ShortClips/Short Video 5.mp4', text: 'Short Video 5' },
     { href: '/images/DontCrack/ShortClips/Short Video 6.mp4', text: 'Short Video 6' }
   ] },
-  { label: 'High-resolution screenshots', links: [{ href: '/images/DontCrack/Screenshots/1.png', text: 'Screenshot 1' }, { href: '/images/DontCrack/Screenshots/2.png', text: 'Screenshot 2' }, { href: '/images/DontCrack/Screenshots/3.png', text: 'Screenshot 3' }, { href: '/images/DontCrack/Screenshots/4.png', text: 'Screenshot 4' }, { href: '/images/DontCrack/Screenshots/5.png', text: 'Screenshot 5' }] },
+  { label: 'High-resolution screenshots', links: [{ href: '/images/DontCrack/Screenshots/1.png', text: 'Screenshot 1' }, { href: '/images/DontCrack/Screenshots/2.png', text: 'Screenshot 2' }, { href: '/images/DontCrack/Screenshots/4.png', text: 'Screenshot 4' }, { href: '/images/DontCrack/Screenshots/5.png', text: 'Screenshot 5' }] },
   { label: 'Gameplay trailer', links: [{ href: '/images/DontCrack/Don\'t Crack Trailer.mp4', text: 'Gameplay Trailer (MP4)' }] },
   { label: 'Studio logo', links: [{ href: '/images/RayleighStudiosImage.png', text: 'Studio Logo' }, { href: '/images/RayleighStudiosLogoRound.png', text: 'Studio Logo (Round)' }] },
   { label: 'Character art', links: [{ href: '/images/DontCrack/Bird.png', text: 'Bird Character' }] },
@@ -321,7 +321,7 @@ export default function PressRelease() {
         <div className="press-date-location">
           <strong>FOR IMMEDIATE RELEASE</strong>
           <br />
-          Newport Beach, CA – March 6, 2026
+          Newport Beach, CA – March 13, 2026
         </div>
         <h1 className="press-headline">
           Rayleigh Studios Announces Don't Crack! A Vibrant, Rage-Inducing Platformer About Flying Home in a Fragile Eggshell
@@ -356,7 +356,7 @@ export default function PressRelease() {
       <div className="press-boilerplate" style={{ marginTop: 0, marginBottom: '2rem' }}>
         <h3>Fact Sheet</h3>
         <p style={{ color: 'var(--text-muted)', lineHeight: 1.8, marginBottom: '1rem' }}>
-          <strong>Release Date:</strong> March 6, 2026<br />
+          <strong>Release Date:</strong> March 13, 2026<br />
           <strong>Platforms:</strong> PC (Steam, Windows/Mac), Additional platforms TBD<br />
           <strong>Player Modes:</strong> Single-player, Co-op (online)<br />
           <strong>Age Rating:</strong> Not yet rated<br />
@@ -366,7 +366,7 @@ export default function PressRelease() {
 
       <div className="press-body">
         <p>
-          <strong>Newport Beach, CA – March 6, 2026</strong> – Rayleigh Studios, an independent game development studio founded by solo developer Porter Killian, is excited to announce Don't Crack!, a fast-paced cartoon-styled platformer where players take flight as an unhatched chick navigating the world from inside its fragile eggshell. Blending precision controls, chaotic environments, and a playful art style, Don't Crack! delivers a unique mix of challenge, charm, and pure panic.
+          <strong>Newport Beach, CA – March 13, 2026</strong> – Rayleigh Studios, an independent game development studio founded by solo developer Porter Killian, is excited to announce Don't Crack!, a fast-paced cartoon-styled platformer where players take flight as an unhatched chick navigating the world from inside its fragile eggshell. Blending precision controls, chaotic environments, and a playful art style, Don't Crack! delivers a unique mix of challenge, charm, and pure panic.
         </p>
 
         <p>
