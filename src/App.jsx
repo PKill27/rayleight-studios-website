@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import PressRelease from './pages/PressRelease';
+import BowlBigPressRelease from './pages/BowlBigPressRelease';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/dontcrack-press-release" element={<PressRelease />} />
+          <Route path="/bowl-big-press-release" element={<BowlBigPressRelease />} />
         </Routes>
       </main>
       <Footer />

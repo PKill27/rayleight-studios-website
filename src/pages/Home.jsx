@@ -26,7 +26,7 @@ export default function Home() {
         </div>
         <div className="scroll-indicator">
           <i className="bi bi-chevron-down" />
-        </div>
+        </div>]
       </section>
 
       <section id="about" className="section-padding">
@@ -78,7 +78,7 @@ export default function Home() {
             </div>
           </div>
           <div className="row g-4 justify-content-center">
-            <div className="col-md-8 col-lg-6">
+            <div className="col-md-6 col-lg-5">
               <div className="game-card">
                 <div className="game-image">
                   <img
@@ -101,7 +101,23 @@ export default function Home() {
                     A vibrant, rage-inducing platformer where you fly as an unhatched chick navigating the world from inside its fragile eggshell. Master precision controls, race the clock, and try not to crack!
                   </p>
                   <Link to="/dontcrack-press-release" className="btn btn-sm btn-outline-pink">
-                    Press release
+                    Press Kit
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-5">
+              <div className="game-card">
+                <div
+                  className="game-image"
+                  style={{ background: 'var(--dark-secondary)' }}
+                  aria-hidden="true"
+                />
+                <div className="game-content">
+                  <h4>Bowl Big</h4>
+                  <p>&nbsp;</p>
+                  <Link to="/bowl-big-press-release" className="btn btn-sm btn-outline-pink">
+                    Press Kit
                   </Link>
                 </div>
               </div>
