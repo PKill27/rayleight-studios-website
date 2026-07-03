@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.5rem;
     font-weight: 900;
     margin-bottom: 1rem;
-    color: #c4b5fd;
+    color: var(--accent-blue);
 }
 
 /* ===================================
@@ -69,26 +69,22 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Orbitron', sans-serif;
     font-weight: 900;
     text-decoration: none;
-    background: linear-gradient(90deg, #7dd3fc 0%, #f9a8d4 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: var(--accent-blue);
 }
 
 .brand-text {
     font-size: 1.5rem;
     letter-spacing: 2px;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    -webkit-text-fill-color: currentColor;
+    color: inherit;
 }
 
 .brand-subtitle {
     font-size: 0.7rem;
     letter-spacing: 4px;
     text-transform: uppercase;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    -webkit-text-fill-color: currentColor;
+    color: inherit;
 }
 
 .navbar-nav .nav-link {
@@ -168,10 +164,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-title {
     font-size: 4rem;
     font-weight: 900;
-    background: linear-gradient(90deg, #7dd3fc 0%, #f9a8d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--accent-blue);
     animation: fadeInUp 1s ease;
 }
 
@@ -197,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #7dd3fc 0%, #f9a8d4 100%);
+    background: var(--accent-blue);
     border: none;
     padding: 12px 30px;
     font-weight: 600;
@@ -207,8 +200,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
+    background: var(--accent-blue-dark);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(249, 168, 212, 0.6);
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.45);
 }
 
 .btn-outline-light {
@@ -232,11 +226,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(-50%);
     font-size: 2rem;
     animation: bounce 2s infinite;
-    background: linear-gradient(90deg, #7dd3fc 0%, #f9a8d4 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: var(--accent-blue);
 }
 
 @keyframes bounce {
@@ -287,8 +277,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .game-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(249, 168, 212, 0.35);
+    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.35);
 }
 
 .game-image {
@@ -316,20 +305,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-outline-pink {
-    border: 2px solid var(--accent-blue);
-    color: var(--accent-blue);
+    border: none;
+    color: var(--dark-bg);
     padding: 8px 20px;
     font-weight: 600;
     transition: all 0.3s ease;
     text-decoration: none;
-    background: transparent;
+    background: var(--accent-blue);
+    box-shadow: 0 4px 15px rgba(125, 211, 252, 0.4);
 }
 
 .btn-outline-pink:hover {
-    background: var(--accent-blue);
+    background: var(--accent-blue-dark);
     color: var(--dark-bg);
     transform: translateY(-2px);
     text-decoration: none;
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.45);
 }
 
 /* ===================================
@@ -345,7 +336,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .team-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(249, 168, 212, 0.35);
+    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.35);
 }
 
 .team-avatar {
@@ -388,11 +379,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-icon {
     font-size: 2rem;
     margin-bottom: 1rem;
-    background: linear-gradient(90deg, #7dd3fc 0%, #f9a8d4 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: var(--accent-blue);
 }
 
 .contact-info p {
@@ -411,11 +398,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer h5 {
     margin-bottom: 1rem;
-    background: linear-gradient(90deg, #7dd3fc 0%, #f9a8d4 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    color: var(--accent-blue);
 }
 
 .social-links {
@@ -569,13 +552,13 @@ html {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #7dd3fc 0%, #f9a8d4 100%);
+    background: var(--accent-blue);
     border-radius: 15px 15px 0 0;
 }
 
 .press-quote:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(249, 168, 212, 0.35);
+    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.35);
 }
 
 .press-quote-text {
@@ -618,7 +601,7 @@ html {
 
 .press-boilerplate:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(249, 168, 212, 0.35);
+    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.35);
 }
 
 .press-boilerplate::before {
@@ -628,7 +611,7 @@ html {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #7dd3fc 0%, #f9a8d4 100%);
+    background: var(--accent-blue);
     border-radius: 15px 15px 0 0;
 }
 
@@ -650,7 +633,7 @@ html {
 
 .press-media-assets:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(249, 168, 212, 0.35);
+    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.35);
 }
 
 .press-media-assets h3 {
