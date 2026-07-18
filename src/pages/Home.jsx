@@ -4,29 +4,32 @@ export default function Home() {
   return (
     <>
       <section id="home" className="hero-section">
-        <div className="hero-overlay" />
-        <div className="container hero-content">
-          <div className="row align-items-center min-vh-100">
-            <div className="col-lg-8 mx-auto text-center">
-              <h1 className="hero-title mb-4">Welcome to Rayleigh Studios</h1>
-              <p className="hero-subtitle mb-5">
-                Where the unseen turns into color and ideas into worlds worth
-                discovering.
-              </p>
-              <div className="hero-buttons">
-                <a href="#games" className="btn btn-primary btn-lg me-3">
-                  Our Games
-                </a>
-                <a href="#contact" className="btn btn-outline-light btn-lg">
-                  Get in Touch
-                </a>
-              </div>
+        <img
+          className="hero-media"
+          src="/images/BowlBig/BowlBigCapsules/08-main-art.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <div className="hero-scrim" aria-hidden="true" />
+        <div className="hero-content">
+          <div className="container">
+            <h1 className="hero-brand">
+              <span className="hero-brand-name">Rayleigh</span>
+              <span className="hero-brand-sub">Studios</span>
+            </h1>
+            <p className="hero-subtitle">
+                Creating captivating games where the invisible turns to color.
+            </p>
+            <div className="hero-buttons">
+              <a href="#games" className="btn btn-primary btn-lg me-3">
+                Our Games
+              </a>
+              <a href="#contact" className="btn btn-outline-light btn-lg">
+                Get in Touch
+              </a>
             </div>
           </div>
         </div>
-        <div className="scroll-indicator">
-          <i className="bi bi-chevron-down" />
-        </div>]
       </section>
 
       <section id="about" className="section-padding">
@@ -41,7 +44,7 @@ export default function Home() {
                 We carry that spirit into every game we create.
               </p>
               <p>
-                Just as scattered light turns the atmosphere into a radiant canvas, we aim to craft systems in games that lead to something greater than the sum of its parts. Adding up to somethign truly breathtaking.
+                Just as scattered light turns the atmosphere into a radiant canvas, we aim to craft systems in games that lead to something greater than the sum of its parts. Adding up to something truly breathtaking.
               </p>
             </div>
             <div className="col-lg-6">
@@ -76,17 +79,27 @@ export default function Home() {
               <div className="game-card">
                 <div className="game-image">
                   <img
+                    src="/images/BowlBig/BowlBigCapsules/02-main-capsule.png"
+                    alt="Bowl Big"
+                  />
+                </div>
+                <div className="game-content">
+                  <h4>Bowl Big</h4>
+                  <p>
+                    An incremental bowling game where your goal is simple: make your score as big as possible. Upgrade pins, unlock multipliers, and keep chasing a bigger throw.
+                  </p>
+                  <Link to="/bowl-big-press-release" className="btn btn-outline-pink">
+                    Press Kit
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 col-lg-5">
+              <div className="game-card">
+                <div className="game-image">
+                  <img
                     src="/images/dont-crack-game.jpg"
                     alt="Don't Crack! Game Screenshot"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'contain',
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      background: 'var(--dark-secondary)',
-                    }}
                   />
                 </div>
                 <div className="game-content">
@@ -94,7 +107,7 @@ export default function Home() {
                   <p>
                     A vibrant, rage-inducing platformer where you fly as an unhatched chick navigating the world from inside its fragile eggshell. Master precision controls, race the clock, and try not to crack!
                   </p>
-                  <Link to="/dontcrack-press-release" className="btn btn-sm btn-outline-pink">
+                  <Link to="/dontcrack-press-release" className="btn btn-outline-pink">
                     Press Kit
                   </Link>
                 </div>
@@ -115,19 +128,16 @@ export default function Home() {
           <div className="row g-4 justify-content-center">
             <div className="col-lg-8">
               <div className="team-card">
-                <div className="row align-items-center">
-                  <div className="col-md-4 text-center mb-4 mb-md-0">
-                    <div className="team-avatar">
-                      <i className="bi bi-person-circle" />
-                    </div>
-                  </div>
-                  <div className="col-md-8">
-                    <h3 className="mb-3">Porter Killian — Lead Developer</h3>
-                    <p className="mb-0">
-                      Porter Killian creates both the art and code behind his games. He earned his bachelor's degree in Computer Science with a minor in Art from the University of Pennsylvania, combining creativity and logic in everything he builds.
-                    </p>
-                  </div>
-                </div>
+                <h3 className="mb-3">Porter Killian — Lead Developer</h3>
+                <p className="mb-0">
+                  Porter is the lead developer and creator of our games. He earned his bachelor's degree in Computer Science with a minor in Art from the University of Pennsylvania, combining creativity and logic in everything he builds.
+                </p>
+              </div>
+            </div>
+            <div className="col-lg-8">
+              <div className="team-card">
+                <h3 className="mb-3">Catherine Killian — Marketing</h3>
+                <p className="mb-0">Catherine drives the strategy that shares our games with players. She ensures that compelling gameplay experiences find their perfect audience, helping the studio turn hidden potential into vibrant player communities.</p>
               </div>
             </div>
           </div>

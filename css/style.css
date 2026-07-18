@@ -19,14 +19,14 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', sans-serif;
     color: var(--text-light);
     background-color: var(--dark-bg);
     overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 700;
 }
 
@@ -61,7 +61,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     line-height: 1.2;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 900;
     text-decoration: none;
 }
@@ -192,8 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+    box-shadow: 0 10px 28px rgba(99, 102, 241, 0.6);
 }
 
 .btn-outline-light {
@@ -207,7 +206,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-outline-light:hover {
     background: var(--text-light);
     color: var(--dark-bg);
-    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(254, 243, 199, 0.25);
 }
 
 .scroll-indicator {
@@ -250,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
 .image-placeholder p {
     font-size: 1rem;
     margin-top: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 .stats-row {
@@ -285,22 +284,27 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--dark-secondary);
     border-radius: 15px;
     overflow: hidden;
-    transition: all 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-.game-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
-}
-
 .game-image {
     position: relative;
-    padding-top: 75%;
+    /* Steam main capsule ratio (1232×706) so both game cards fill equally */
+    padding-top: 57.3%;
     overflow: hidden;
+    background: var(--dark-secondary);
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .game-placeholder {
@@ -384,13 +388,7 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--dark-secondary);
     padding: 2rem;
     border-radius: 15px;
-    transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-.team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
 }
 
 .team-avatar {

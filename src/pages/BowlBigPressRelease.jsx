@@ -1,7 +1,41 @@
 import PressAssetItem from '../components/press/PressAssetItem';
 import useDocumentTitle from '../hooks/useDocumentTitle';
 
-const MEDIA_ASSETS = [];
+const MEDIA_ASSETS = [
+  {
+    label: 'Game logo',
+    links: [
+      { href: '/images/BowlBig/BowlBigCapsules/09-logo.png', text: 'Game Logo (PNG)' },
+    ],
+  },
+  {
+    label: 'Key art / hero image',
+    links: [
+      { href: '/images/BowlBig/BowlBigCapsules/08-main-art.png', text: 'Main Art' },
+      { href: '/images/BowlBig/BowlBigCapsules/07-page-background.png', text: 'Page Background' },
+      { href: '/images/BowlBig/BowlBigCapsules/06-library-hero.png', text: 'Library Hero' },
+    ],
+  },
+  {
+    label: 'Capsules & headers',
+    links: [
+      { href: '/images/BowlBig/BowlBigCapsules/02-main-capsule.png', text: 'Main Capsule' },
+      { href: '/images/BowlBig/BowlBigCapsules/04-vertical-capsule.png', text: 'Vertical Capsule' },
+      { href: '/images/BowlBig/BowlBigCapsules/05-library-capsule.png', text: 'Library Capsule' },
+      {
+        href: '/images/BowlBig/BowlBigCapsules/01-library-header.png',
+        text: 'Library Header / Header Capsule',
+      },
+    ],
+  },
+  {
+    label: 'Studio logo',
+    links: [
+      { href: '/images/RayleighStudiosImage.png', text: 'Studio Logo' },
+      { href: '/images/RayleighStudiosLogoRound.png', text: 'Studio Logo (Round)' },
+    ],
+  },
+];
 
 export default function BowlBigPressRelease() {
   useDocumentTitle('Bowl Big Press Kit | Rayleigh Studios');
@@ -93,21 +127,11 @@ export default function BowlBigPressRelease() {
 
         <div className="press-media-assets">
           <h3>Media Assets Available</h3>
-          {MEDIA_ASSETS.length > 0 ? (
-            <>
-              <p style={{ color: 'var(--text-muted)', marginBottom: '1rem' }}>
-                Click each category to expand and view available assets. Click on any image or video to
-                download, or double-click to preview in full screen.
-              </p>
-              <div className="press-asset-list">
-                {MEDIA_ASSETS.map((asset) => (
-                  <PressAssetItem key={asset.label} label={asset.label} links={asset.links} />
-                ))}
-              </div>
-            </>
-          ) : (
-            <p style={{ color: 'var(--text-muted)', marginBottom: 0 }}>&nbsp;</p>
-          )}
+          <div className="press-asset-list">
+            {MEDIA_ASSETS.map((asset) => (
+              <PressAssetItem key={asset.label} label={asset.label} links={asset.links} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

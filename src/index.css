@@ -9,7 +9,7 @@
     --accent-blue: #38bdf8;
     --accent-blue-dark: #0ea5e9;
     --accent-blue-light: #e0f2fe;
-    --press-title-color: #c4b5fd;
+    --press-title-color: var(--text-light);
     --dark-bg: #1c1917;
     --dark-secondary: #292524;
     --text-light: #fef3c7;
@@ -23,14 +23,14 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', sans-serif;
     color: var(--text-light);
     background-color: var(--dark-bg);
     overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 700;
 }
 
@@ -50,23 +50,24 @@ h1, h2, h3, h4, h5, h6 {
    Navigation
    =================================== */
 .navbar {
-    background: rgba(28, 25, 23, 0.95);
+    background: rgba(28, 25, 23, 0.35);
     backdrop-filter: blur(10px);
     padding: 1rem 0;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: none;
 }
 
 .navbar.scrolled {
-    background: rgba(28, 25, 23, 0.98);
+    background: rgba(28, 25, 23, 0.92);
     padding: 0.5rem 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-brand {
     display: flex;
     flex-direction: column;
     line-height: 1.2;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 900;
     text-decoration: none;
     color: var(--accent-blue);
@@ -121,63 +122,100 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section {
     position: relative;
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-secondary) 100%);
+    min-height: 100dvh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
     overflow: hidden;
+    background: var(--dark-bg);
 }
 
-.hero-section::before {
-    content: '';
+.hero-media {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 50%, rgba(249, 115, 22, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(251, 113, 133, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08) 0%, transparent 45%);
-    animation: pulse 4s ease-in-out infinite;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    z-index: 0;
+    filter: brightness(0.3);
+    animation: heroReveal 1.4s ease-out both;
 }
 
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.8; }
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: scale(1.04);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-.hero-overlay {
+/* Readability only — keeps the art dominant */
+.hero-scrim {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(249,115,22,0.12)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-    opacity: 0.3;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        to top,
+        rgba(28, 25, 23, 0.88) 0%,
+        rgba(28, 25, 23, 0.4) 22%,
+        rgba(28, 25, 23, 0.08) 45%,
+        transparent 62%
+    );
+    pointer-events: none;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
+    width: 100%;
+    padding: 0 0 4.5rem;
 }
 
-.hero-title {
-    font-size: 4rem;
+.hero-brand {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 1.25rem;
+    line-height: 0.95;
+    animation: fadeInUp 0.9s ease both;
+}
+
+.hero-brand-name {
+    font-family: 'Archivo', sans-serif;
+    font-size: clamp(3rem, 9vw, 5.5rem);
     font-weight: 900;
-    color: var(--accent-blue);
-    animation: fadeInUp 1s ease;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--text-light);
+}
+
+.hero-brand-sub {
+    font-family: 'Archivo', sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.35rem);
+    font-weight: 800;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    opacity: 0.85;
+    margin-top: 0.35rem;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
-    color: var(--text-muted);
-    animation: fadeInUp 1s ease 0.2s both;
+    max-width: 28rem;
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    line-height: 1.5;
+    color: rgba(254, 243, 199, 0.82);
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.9s ease 0.15s both;
 }
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(24px);
     }
     to {
         opacity: 1;
@@ -186,7 +224,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-buttons {
-    animation: fadeInUp 1s ease 0.4s both;
+    animation: fadeInUp 0.9s ease 0.28s both;
 }
 
 .btn-primary {
@@ -195,14 +233,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 12px 30px;
     font-weight: 600;
     color: var(--dark-bg);
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(125, 211, 252, 0.4);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .btn-primary:hover {
     background: var(--accent-blue-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.45);
+    color: #fff;
 }
 
 .btn-outline-light {
@@ -210,28 +246,12 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-light);
     padding: 12px 30px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .btn-outline-light:hover {
     background: var(--text-light);
     color: var(--dark-bg);
-    transform: translateY(-2px);
-}
-
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    animation: bounce 2s infinite;
-    color: var(--accent-blue);
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-10px); }
 }
 
 /* ===================================
@@ -259,7 +279,7 @@ h1, h2, h3, h4, h5, h6 {
 .image-placeholder p {
     font-size: 1rem;
     margin-top: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 /* ===================================
@@ -269,21 +289,27 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--dark-secondary);
     border-radius: 15px;
     overflow: hidden;
-    transition: all 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-.game-card:hover {
-    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.35);
-}
-
 .game-image {
     position: relative;
-    padding-top: 75%;
+    /* Steam main capsule ratio (1232×706) so both game cards fill equally */
+    padding-top: 57.3%;
     overflow: hidden;
+    background: var(--dark-secondary);
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .game-content {
@@ -307,20 +333,19 @@ h1, h2, h3, h4, h5, h6 {
 .btn-outline-pink {
     border: none;
     color: var(--dark-bg);
-    padding: 8px 20px;
+    padding: 12px 28px;
+    font-size: 1.1rem;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
     text-decoration: none;
     background: var(--accent-blue);
-    box-shadow: 0 4px 15px rgba(125, 211, 252, 0.4);
+    align-self: flex-start;
 }
 
 .btn-outline-pink:hover {
     background: var(--accent-blue-dark);
-    color: var(--dark-bg);
-    transform: translateY(-2px);
+    color: #fff;
     text-decoration: none;
-    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.45);
 }
 
 /* ===================================
@@ -330,13 +355,7 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--dark-secondary);
     padding: 2rem;
     border-radius: 15px;
-    transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-.team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.35);
 }
 
 .team-avatar {
@@ -422,12 +441,31 @@ h1, h2, h3, h4, h5, h6 {
    Responsive Design
    =================================== */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
+    .hero-content {
+        padding: 0 0 2rem;
     }
-    
+
+    .hero-brand {
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-brand-name {
+        font-size: clamp(2.4rem, 12vw, 3.25rem);
+    }
+
+    .hero-brand-sub {
+        letter-spacing: 0.32em;
+    }
+
     .hero-subtitle {
-        font-size: 1.2rem;
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin: 0 0 0.75rem !important;
     }
     
     .section-title {
@@ -487,7 +525,7 @@ html {
 }
 
 .press-logo {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 900;
     font-size: 1.8rem;
     color: var(--press-title-color);
@@ -501,7 +539,7 @@ html {
 }
 
 .press-headline {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--press-title-color);
@@ -541,7 +579,6 @@ html {
     margin: 2.5rem 0;
     border-radius: 15px;
     overflow: hidden;
-    transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -554,11 +591,6 @@ html {
     height: 3px;
     background: var(--accent-blue);
     border-radius: 15px 15px 0 0;
-}
-
-.press-quote:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.35);
 }
 
 .press-quote-text {
@@ -579,7 +611,7 @@ html {
 }
 
 .press-section-title {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 1.5rem;
     color: var(--press-title-color);
     margin-top: 3rem;
@@ -595,13 +627,7 @@ html {
     border-radius: 15px;
     margin-top: 2rem;
     overflow: hidden;
-    transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-.press-boilerplate:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.35);
 }
 
 .press-boilerplate::before {
@@ -616,7 +642,7 @@ html {
 }
 
 .press-boilerplate h3 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Archivo', sans-serif;
     color: var(--press-title-color);
     margin-bottom: 1rem;
     font-size: 1.2rem;
@@ -627,17 +653,11 @@ html {
     padding: 2rem;
     border-radius: 15px;
     margin-top: 2rem;
-    transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-.press-media-assets:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.35);
-}
-
 .press-media-assets h3 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Archivo', sans-serif;
     color: var(--press-title-color);
     margin-bottom: 1rem;
     font-size: 1.2rem;

@@ -116,9 +116,6 @@ export default function PressRelease() {
 
         <div className="press-media-assets">
           <h3>Media Assets Available</h3>
-          <p style={{ color: 'var(--text-muted)', marginBottom: '1rem' }}>
-            Click each category to expand and view available assets. Click on any image or video to download, or double-click to preview in full screen.
-          </p>
           <div className="press-asset-list">
             {MEDIA_ASSETS.map((asset) => (
               <PressAssetItem key={asset.label} label={asset.label} links={asset.links} />
